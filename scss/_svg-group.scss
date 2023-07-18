@@ -1,0 +1,32 @@
+.svg-group {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: rgba(223, 216, 216, 0.74);
+}
+
+.svg-group svg:not(:first-child) {
+	margin-right: 2px;
+	margin-left: 1px;
+}
+
+.svg-group .icon1 {
+	fill: rgb(0, 92, 212);
+	stroke: rgb(214, 214, 255);
+}
+
+.svg-group .icon2 {
+	fill: rgb(13, 117, 253);
+	stroke: rgb(214, 214, 255);
+}
+
+.svg-group .icon3 {
+	fill: rgb(129, 5, 231);
+	stroke: rgb(255, 128, 8);
+}
+
+.svg-group .icon4 {
+	fill: rgb(182, 16, 5);
+	stroke: rgb(214, 214, 255);
+}

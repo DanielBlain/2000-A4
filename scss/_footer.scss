@@ -1,0 +1,54 @@
+@use "vars-colors" as *;
+@use "capitalize" as *;
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.footer-left {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 18px;
+    font-weight: bold;
+}
+
+/**********************************************************
+ * Above Footer
+ *
+**/
+
+.zero {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: rgba(223, 216, 216, 0.74);
+
+    & h2 {
+        background-color: inherit;
+    }
+ 
+    & li {
+        list-style-type: none;
+    }
+
+    & a {
+        padding: 1rem;
+        font-weight: bold;
+        color: ($clr-primary);
+
+        &::after {
+            content: '\f061';
+            font-family: 'Font Awesome 5 free';
+            font-weight: 900;
+            position: relative;
+            left: 0.5rem;
+        }
+        &:visited {
+            color: inherit;
+        }
+    }
+}
