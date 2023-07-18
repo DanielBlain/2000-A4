@@ -1,0 +1,6 @@
+@use "vars-colors" as *;
+
+/* script class expand:active */
+@mixin capitalize {
+    text-transform: capitalize;
+}
