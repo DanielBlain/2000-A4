@@ -1,0 +1,53 @@
+@use "vars-colors" as *;
+@use "capitalize" as *;
+
+/**********************************************************
+ * Trending panel
+ *
+**/
+
+.trending {
+    @include capitalize;
+
+    & > * {
+        background-color: inherit;
+    }
+
+    & h3 {
+        font-size: 1rem;
+        margin: 0 0 10px 5px;
+    }
+
+    &-article {
+        display: grid;
+        grid-template-columns: 30px repeat(2, 1fr);
+        grid-template-rows: 1fr 0.5fr;
+        border-bottom: solid 1px black;
+        margin-top: 10px;
+    }
+
+    &-article p,
+    &-article a {
+        margin: 0 20px 10px 5px;
+        background-color: inherit;
+        padding: 0;    
+    }
+
+    .numbering {
+        grid-row: 1/3;
+        font-weight: bold;
+        font-size: clamp(1rem, 0.9000rem + 0.5000vw, 1.5rem);
+        margin: 5px 5px 10px 7px;    
+    }
+    
+    .headline {
+        font-weight: bold;
+        grid-column: 2/4;
+        margin-top: 5px;    
+    }
+
+    .views {
+        color: ($clr-gray400);
+    }
+}
+
