@@ -196,30 +196,6 @@ a[href^="./financial"] h2::before {
 
 
 /**********************************************************
- * 
- *
-**/
-
-.banner-block {
-    padding: 10px 0 10px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.banner-block > * {
-    color: ($clr-black);
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.5rem;
-    text-shadow: 2.5px 3px black, 2.5px 2.5px black, 2.5px 2px black, 2.5px 1.5px black, 2.5px 1px black, 2.5px 0.5px black;
-}
-
-.banner-block .banner-text {
-    color: ($clr-gray100);
-    transform: scaleX(170%);
-}
-
-
-/**********************************************************
  * Grid cell styles
  *
 **/
