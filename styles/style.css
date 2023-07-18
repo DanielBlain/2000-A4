@@ -165,38 +165,33 @@ a[href^="./financial"] h2::before {
   border-radius: 0.2rem;
   width: 100%;
 }
-
 .grid-cell > a {
   padding: 1rem;
 }
-
+.grid-cell h2, .grid-cell h3 {
+  text-transform: capitalize;
+}
 .grid-cell h3 {
   padding: 5px 0 5px 1rem;
 }
-
 .grid-cell p {
   padding: 1rem;
   margin: 0;
   background-color: #F0F7F8;
 }
-
 .grid-cell ul {
   padding-bottom: 1rem;
 }
-
 .grid-cell li {
   padding: 10px 0;
 }
-
 .grid-cell :first-child {
   border-radius: 0.2rem 0.2rem 0 0;
   padding: 10px 0;
 }
-
 .grid-cell a:hover :first-child {
   border-radius: 0.2rem;
 }
-
 .grid-cell :last-child {
   border-radius: 0 0 0.2rem 0.2rem;
 }
@@ -221,22 +216,6 @@ a[href^="./financial"] h2::before {
 .banner-block .banner-text {
   color: #F0F7F8;
   transform: scaleX(170%);
-}
-
-.banner-border-1 {
-  transform: scaleX(200%) translateY(0.07rem);
-}
-
-.banner-border-2 {
-  transform: scaleX(200%) translateY(0.15rem);
-}
-
-.banner-border-3 {
-  transform: scaleX(200%) translateY(0.23rem);
-}
-
-.banner-border-4 {
-  transform: scaleX(200%) translateY(0.3rem);
 }
 
 .hamburger-button {
@@ -276,11 +255,11 @@ nav.is-active {
 }
 
 .hamburger-nav {
+  text-transform: capitalize;
   display: block;
   background-color: #CFD8DC;
   border: 2px solid #6B7E86;
 }
-
 .hamburger-nav ul {
   padding: 0;
   margin: 0;
@@ -290,7 +269,6 @@ nav.is-active {
   gap: 50px;
   background-color: #6B7E86;
 }
-
 .hamburger-nav li {
   font-size: 2rem;
   background-color: #CFD8DC;
@@ -300,19 +278,16 @@ nav.is-active {
   border-radius: 0.2rem;
   font-family: "DM Serif Display", serif;
 }
-
 .hamburger-nav li:hover {
   background-color: #29E6A7;
   color: #6B7E86;
 }
-
 .hamburger-nav a {
   display: block;
   padding: 0.5rem;
   text-align: center;
   color: #304FFE;
 }
-
 .hamburger-nav a:visited {
   color: #304FFE;
 }
@@ -382,6 +357,7 @@ img ~ * {
 }
 
 .card-title {
+  text-transform: capitalize;
   padding: 1rem;
   text-align: center;
 }
