@@ -1,34 +1,14 @@
-/* font-family: 'DM Sans', sans-serif;
-font-family: 'DM Serif Display', serif; */
-* {
-    box-sizing: border-box;
-}
-/* General Styling */
-:root {
-    --background-color: white;
-    --primary-button: green;
-    --secondary-button: rgb(0, 108, 0);
-    --accent: magenta;
-    --clr-primary: #304FFE;
-    --clr-primary-hover: #29E6A7;
-    --clr-primary-dark: #039D69;
-    --clr-gray100: #F0F7F8;
-    --clr-gray200: #CFD8DC;
-    --clr-gray400: #6B7E86;
-    --clr-red100: rgb(255, 17, 0);
-    --clr-black: black;
-    --radius: 0.2rem;
-}
+@use "vars-colors" as *;
 
 body {
-    background-color: var(--clr-gray200);
+    background-color: ($clr-gray200);
     font-family: 'DM Sans', sans-serif;
-    color: var(--clr-black);
+    color: ($clr-black);
     font-size: clamp(0.4rem, 0.4000rem + 0.5000vw, 1rem);
 }
 
 header {
-    background-color: var(--clr-gray400);
+    background-color: ($clr-gray400);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,7 +75,7 @@ h2,
 h3,
 ul {
     margin: 0;
-    background-color: var(--clr-gray100);
+    background-color: ($clr-gray100);
 }
 
 ul {
@@ -163,7 +143,7 @@ a[href^="./financial"] h2::before {
 .main-grid a {
     padding: 1rem;
     font-weight: bold;
-    color: var(--clr-black);
+    color: ($clr-black);
 }
 
 .main-grid>* {
@@ -182,7 +162,7 @@ a[href^="./financial"] h2::before {
 
 /* Card link is the moving arrow animations */
 .card-description + .card-link {
-    background-color: var(--background-color);
+    background-color: ($background-color);
 }
 
 .grid-cell {
@@ -190,7 +170,7 @@ a[href^="./financial"] h2::before {
     background-repeat: no-repeat;
     background-size: cover;
     padding: .4rem;
-    border-radius: var(--radius);
+    border-radius: ($radius);
     width: 100%;
 }
 
@@ -205,7 +185,7 @@ a[href^="./financial"] h2::before {
 .grid-cell p {
     padding: 1rem;
     margin: 0;
-    background-color: var(--clr-gray100);
+    background-color: ($clr-gray100);
 }
 
 .grid-cell ul {
@@ -217,16 +197,16 @@ a[href^="./financial"] h2::before {
 }
 
 .grid-cell :first-child {
-    border-radius: var(--radius) var(--radius) 0 0;
+    border-radius: ($radius) ($radius) 0 0;
     padding: 10px 0;
 }
 
 .grid-cell a:hover :first-child {
-    border-radius: var(--radius);
+    border-radius: ($radius);
 }
 
 .grid-cell :last-child {
-    border-radius: 0 0 var(--radius) var(--radius);
+    border-radius: 0 0 ($radius) ($radius);
 }
 
 /**********************************************************
@@ -241,14 +221,14 @@ a[href^="./financial"] h2::before {
 }
 
 .banner-block > * {
-    color: var(--clr-black);
+    color: ($clr-black);
     font-family: 'DM Serif Display', serif;
     font-size: 2.5rem;
     text-shadow: 2.5px 3px black, 2.5px 2.5px black, 2.5px 2px black, 2.5px 1.5px black, 2.5px 1px black, 2.5px 0.5px black;
 }
 
 .banner-block .banner-text {
-    color: var(--clr-gray100);
+    color: ($clr-gray100);
     transform: scaleX(170%);
 }
 
@@ -261,13 +241,13 @@ a[href^="./financial"] h2::before {
     display: none; /* Reshows on > mobile sized widths */
     width: 60px;
     height: 60px;
-    border-radius: var(--radius);
+    border-radius: ($radius);
 }
 
 .hamburger-button .bar {
     width: 35px;
     height: 4px;
-    background-color: var(--clr-primary);
+    background-color: ($clr-primary);
     display: block;
     margin: 8px auto;
     transition: all 0.4s ease-in-out;
@@ -295,8 +275,8 @@ nav.is-active {
 
 .hamburger-nav {
     display: block;
-    background-color: var(--clr-gray200);
-    border: 2px solid var(--clr-gray400);
+    background-color: ($clr-gray200);
+    border: 2px solid ($clr-gray400);
 }
 
 .hamburger-nav ul {
@@ -306,33 +286,33 @@ nav.is-active {
     padding: 1rem;
     justify-content: space-between;
     gap: 50px;
-    background-color: var(--clr-gray400);
+    background-color: ($clr-gray400);
 }
 
 .hamburger-nav li {
     font-size: 2rem;
-    background-color: var(--clr-gray200);
-    border-color: var(--clr-primary-dark);
-    color: var(--clr-gray100);
+    background-color: ($clr-gray200);
+    border-color: ($clr-primary-dark);
+    color: ($clr-gray100);
     padding: 0 2rem 0 2rem;
-    border-radius: var(--radius);
+    border-radius: ($radius);
     font-family: 'DM Serif Display', serif;
 }
 
 .hamburger-nav li:hover {
-    background-color: var(--clr-primary-hover);
-    color: var(--clr-gray400);
+    background-color: ($clr-primary-hover);
+    color: ($clr-gray400);
 }
 
 .hamburger-nav a {
     display: block;
     padding: .5rem;
     text-align: center;
-    color: var(--clr-primary);
+    color: ($clr-primary);
 }
 
 .hamburger-nav a:visited {
-    color: var(--clr-primary);
+    color: ($clr-primary);
 }
 
 
@@ -343,9 +323,9 @@ nav.is-active {
 
 .grid-item {
 	overflow: hidden;
-	border: 1px solid var(--clr-gray200);
-    background-color: var(--background-color);
-	box-shadow: 4px 4px var(--clr-gray400);
+	border: 1px solid ($clr-gray200);
+    background-color: ($background-color);
+	box-shadow: 4px 4px ($clr-gray400);
     margin-top: 10px;
 	display: flex;
 	flex-direction: column;
@@ -353,8 +333,8 @@ nav.is-active {
 	cursor: pointer;
 	transition: border 200ms ease-in, box-shadow 200ms ease-in;
 	&:hover {
-		border: 1px solid var(--clr-primary);
-		box-shadow: 8px 8px var(--clr-primary-hover);
+		border: 1px solid ($clr-primary);
+		box-shadow: 8px 8px ($clr-primary-hover);
 	}
 }
 
@@ -363,7 +343,7 @@ nav.is-active {
 }
 
 img ~ * {
-    background-color: var(--background-color);
+    background-color: ($background-color);
 }
 
 
@@ -378,7 +358,7 @@ img ~ * {
 }
 
 .grid-item .card-link {
-    color: var(--clr-primary);
+    color: ($clr-primary);
 }
 
 @keyframes arrow {
@@ -471,7 +451,7 @@ img ~ * {
 .zero a {
 	padding: 1rem;
 	font-weight: bold;
-	color: var(--clr-primary);
+	color: ($clr-primary);
 
 	&::after {
 		content: '\f061';
@@ -531,7 +511,7 @@ img ~ * {
 }
 .weather-card:before {
     content: "";
-    border: solid 40px var(--clr-gray200);
+    border: solid 40px ($clr-gray200);
     position: absolute;
     top: -80px;
     left: -5px;
@@ -549,7 +529,7 @@ img ~ * {
     background-color: beige;
     z-index: 16;
     position: relative;
-    border-radius: var(--radius);
+    border-radius: ($radius);
 }
 
 .weather-card div {
@@ -570,7 +550,7 @@ img ~ * {
     padding: 1rem 4rem;
     border: solid 1px black;
     background-color: lightskyblue;
-    border-radius: var(--radius);
+    border-radius: ($radius);
     display: flex;
     justify-content: center;
 }
@@ -602,11 +582,11 @@ img ~ * {
     height: 50px;
     margin-right: 10px;
     padding: 0 20px 0 10px;
-    border-radius: var(--radius);
+    border-radius: ($radius);
 }
 
 .degree-active {
-    background-color: var(--clr-gray200);
+    background-color: ($clr-gray200);
 }
 
 /* script class degree-active */
@@ -647,7 +627,7 @@ img ~ * {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--clr-gray100);
+    background-color: ($clr-gray100);
 }
 
 .weather-tab p {
@@ -666,7 +646,7 @@ img ~ * {
     text-align: center;
     background-color: whitesmoke;
     order: 30;
-    border-radius: var(--radius);
+    border-radius: ($radius);
 }
 
 .expand:active {
@@ -679,8 +659,8 @@ img ~ * {
 
 .weather-panel + .trending {
     padding: 10px 0 0 10px;
-    background-color: var(--background-color);
-    border-radius: var(--radius);
+    background-color: ($background-color);
+    border-radius: ($radius);
     grid-row: 2/3;
     grid-column: 1/2;
 }
@@ -720,12 +700,12 @@ img ~ * {
     font-weight: bold;
     grid-column: 2/4;
     margin-top: 5px;
-    color: var(--text-color);
+    color: ($text-color);
 }
 
 
 .trending .views {
-    color: var(--clr-gray400);
+    color: ($clr-gray400);
 }
 
 .grid-item:last-of-type {
@@ -968,7 +948,7 @@ a:visited {
         grid-row: 3/4;
     }
     .weather-card:before {
-        border: solid 40px var(--clr-gray200);
+        border: solid 40px ($clr-gray200);
     }
     #student-stress-rising {
         position: relative;
