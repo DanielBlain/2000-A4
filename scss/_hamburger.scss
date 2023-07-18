@@ -1,0 +1,116 @@
+@use "vars-colors" as *;
+@use "capitalize" as *;
+
+.hamburger-button {
+    display: none; /* Reshows on > mobile sized widths */
+    width: 60px;
+    height: 60px;
+    border-radius: ($radius);
+
+    & .bar {
+        width: 35px;
+        height: 4px;
+        background-color: ($clr-primary);
+        display: block;
+        margin: 8px auto;
+        transition: all 0.4s ease-in-out;
+
+        &:nth-child(1).is-active {
+            transform: rotate(-10deg);
+            transform-origin: 100% 50%;
+        }
+
+        &:nth-child(2).is-active {
+            transform: rotate(-10deg) translate(-4px);
+            transform-origin: 120% 50%;
+        }
+        
+        &:nth-child(3).is-active {
+            transform: rotate(-10deg) translate(-8px);
+            transform-origin: 140% 50%;
+        }                
+    }
+}    
+
+.hamburger-nav {
+    @include capitalize;
+    display: block;
+    background-color: ($clr-gray200);
+    border: 2px solid ($clr-gray400);
+
+    &.is-active {
+        top: 70px;
+        right: 0;
+    }
+        
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        padding: 1rem;
+        justify-content: space-between;
+        gap: 50px;
+        background-color: ($clr-gray400);
+    }
+
+    li {
+        font-size: 2rem;
+        background-color: ($clr-gray200);
+        border-color: ($clr-primary-dark);
+        color: ($clr-gray100);
+        padding: 0 2rem 0 2rem;
+        border-radius: ($radius);
+        font-family: 'DM Serif Display', serif;        
+    }
+
+    li:hover {
+        background-color: ($clr-primary-hover);
+        color: ($clr-gray400);
+    }
+
+    a {
+        display: block;
+        padding: .5rem;
+        text-align: center;
+        color: ($clr-primary);
+    }
+
+    a:visited {
+        color: ($clr-primary);
+    }
+}
+
+@media (max-width: 1500px) {
+    .hamburger-nav {
+        position: absolute;
+        width: 12rem;
+        right: -1000px;
+        top: 70px;
+        transition: all 0.4s ease-in-out;
+
+        & ul {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        & li {
+            padding: 0;
+            border-radius: 0;
+        }
+    }
+
+    .hamburger-button {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+}
+
+@media (max-width: 420px) {d
+    .hamburger-button {
+        width: 50px;
+        height: 50px;
+        top: 15px;
+    }
+}

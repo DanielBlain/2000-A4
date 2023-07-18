@@ -1,11 +1,4 @@
 /* script class expand:active */
-body {
-  background-color: #CFD8DC;
-  font-family: "DM Sans", sans-serif;
-  color: black;
-  font-size: clamp(0.4rem, 0.4rem + 0.5vw, 1rem);
-}
-
 header {
   background-color: #6B7E86;
   display: flex;
@@ -29,6 +22,135 @@ header {
 .header-left img {
   width: 48px;
   height: 48px;
+}
+
+@media (max-width: 1500px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .header-left {
+    margin: 0 20% 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .header-left {
+    margin: 0 20% 0 0;
+  }
+}
+@media (max-width: 500px) {
+  .header-left {
+    margin: 0 20% 0 0;
+  }
+}
+.hamburger-button {
+  display: none; /* Reshows on > mobile sized widths */
+  width: 60px;
+  height: 60px;
+  border-radius: 0.2rem;
+}
+.hamburger-button .bar {
+  width: 35px;
+  height: 4px;
+  background-color: #304FFE;
+  display: block;
+  margin: 8px auto;
+  transition: all 0.4s ease-in-out;
+}
+.hamburger-button .bar:nth-child(1).is-active {
+  transform: rotate(-10deg);
+  transform-origin: 100% 50%;
+}
+.hamburger-button .bar:nth-child(2).is-active {
+  transform: rotate(-10deg) translate(-4px);
+  transform-origin: 120% 50%;
+}
+.hamburger-button .bar:nth-child(3).is-active {
+  transform: rotate(-10deg) translate(-8px);
+  transform-origin: 140% 50%;
+}
+
+.hamburger-nav {
+  text-transform: capitalize;
+  display: block;
+  background-color: #CFD8DC;
+  border: 2px solid #6B7E86;
+}
+.hamburger-nav.is-active {
+  top: 70px;
+  right: 0;
+}
+.hamburger-nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: #6B7E86;
+}
+.hamburger-nav li {
+  font-size: 2rem;
+  background-color: #CFD8DC;
+  border-color: #039D69;
+  color: #F0F7F8;
+  padding: 0 2rem 0 2rem;
+  border-radius: 0.2rem;
+  font-family: "DM Serif Display", serif;
+}
+.hamburger-nav li:hover {
+  background-color: #29E6A7;
+  color: #6B7E86;
+}
+.hamburger-nav a {
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  color: #304FFE;
+}
+.hamburger-nav a:visited {
+  color: #304FFE;
+}
+
+@media (max-width: 1500px) {
+  .hamburger-nav {
+    position: absolute;
+    width: 12rem;
+    right: -1000px;
+    top: 70px;
+    transition: all 0.4s ease-in-out;
+  }
+  .hamburger-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .hamburger-nav li {
+    padding: 0;
+    border-radius: 0;
+  }
+  .hamburger-button {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+  }
+}
+@media (max-width: 420px) {
+  d .hamburger-button {
+    width: 50px;
+    height: 50px;
+    top: 15px;
+  }
+}
+body {
+  background-color: #CFD8DC;
+  font-family: "DM Sans", sans-serif;
+  color: black;
+  font-size: clamp(0.4rem, 0.4rem + 0.5vw, 1rem);
 }
 
 footer {
@@ -197,7 +319,7 @@ a[href^="./financial"] h2::before {
 }
 
 /**********************************************************
- * Banner, Hamburger button, Nav popup menu
+ * 
  *
 **/
 .banner-block {
@@ -216,80 +338,6 @@ a[href^="./financial"] h2::before {
 .banner-block .banner-text {
   color: #F0F7F8;
   transform: scaleX(170%);
-}
-
-.hamburger-button {
-  display: none; /* Reshows on > mobile sized widths */
-  width: 60px;
-  height: 60px;
-  border-radius: 0.2rem;
-}
-
-.hamburger-button .bar {
-  width: 35px;
-  height: 4px;
-  background-color: #304FFE;
-  display: block;
-  margin: 8px auto;
-  transition: all 0.4s ease-in-out;
-}
-
-.hamburger-button .bar:nth-child(1).is-active {
-  transform: rotate(-10deg);
-  transform-origin: 100% 50%;
-}
-
-.hamburger-button .bar:nth-child(2).is-active {
-  transform: rotate(-10deg) translate(-4px);
-  transform-origin: 120% 50%;
-}
-
-.hamburger-button .bar:nth-child(3).is-active {
-  transform: rotate(-10deg) translate(-8px);
-  transform-origin: 140% 50%;
-}
-
-nav.is-active {
-  top: 70px;
-  right: 0;
-}
-
-.hamburger-nav {
-  text-transform: capitalize;
-  display: block;
-  background-color: #CFD8DC;
-  border: 2px solid #6B7E86;
-}
-.hamburger-nav ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  padding: 1rem;
-  justify-content: space-between;
-  gap: 50px;
-  background-color: #6B7E86;
-}
-.hamburger-nav li {
-  font-size: 2rem;
-  background-color: #CFD8DC;
-  border-color: #039D69;
-  color: #F0F7F8;
-  padding: 0 2rem 0 2rem;
-  border-radius: 0.2rem;
-  font-family: "DM Serif Display", serif;
-}
-.hamburger-nav li:hover {
-  background-color: #29E6A7;
-  color: #6B7E86;
-}
-.hamburger-nav a {
-  display: block;
-  padding: 0.5rem;
-  text-align: center;
-  color: #304FFE;
-}
-.hamburger-nav a:visited {
-  color: #304FFE;
 }
 
 /**********************************************************
@@ -706,33 +754,6 @@ a:visited {
     grid-template-rows: 500px 450px 420px 360px;
     gap: 20px 30px;
   }
-  .hamburger-nav {
-    position: absolute;
-    width: 12rem;
-    right: -1000px;
-    top: 70px;
-    transition: all 0.4s ease-in-out;
-  }
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  .hamburger-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-  .hamburger-nav li {
-    padding: 0;
-    border-radius: 0;
-  }
-  .hamburger-button {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 5px;
-  }
   .weather-panel {
     grid-row: 1/2;
   }
@@ -827,9 +848,6 @@ a:visited {
     grid-column: 3/4;
     grid-row: 4;
   }
-  .header-left {
-    margin: 0 20% 0 0;
-  }
   .grid-item {
     width: 200px;
   }
@@ -861,9 +879,6 @@ a:visited {
   .grid-item h2 {
     font-size: 0.75rem;
   }
-  .header-left {
-    margin: 0 20% 0 0;
-  }
 }
 @media (max-width: 500px) {
   .main-grid {
@@ -890,9 +905,6 @@ a:visited {
   }
   .banner-block .banner-text {
     transform: scaleX(90%);
-  }
-  .header-left {
-    margin: 0 20% 0 0;
   }
   .weather-panel {
     grid-column: 2/3;
@@ -938,11 +950,6 @@ a:visited {
     grid-column-end: span 2;
     width: 250px;
     justify-self: center;
-  }
-  .hamburger-button {
-    width: 50px;
-    height: 50px;
-    top: 15px;
   }
   .card {
     grid-column: 1/3;

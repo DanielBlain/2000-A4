@@ -1,0 +1,54 @@
+@use "vars-colors" as *;
+@use "capitalize" as *;
+
+header {
+    background-color: ($clr-gray400);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* To allow positioning of children */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header-left {
+    padding: 5px 0 10px 0;
+    margin: 0 35% 0 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-left img {
+    width: 48px;
+    height: 48px;
+}
+
+@media (max-width: 1500px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header-left {
+        margin:0 20% 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-left {
+        margin:0 20% 0 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-left {
+        margin:0 20% 0 0;
+    }
+}
