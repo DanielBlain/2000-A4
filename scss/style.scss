@@ -111,26 +111,10 @@ a[href^="./financial"] h2::before {
 .main-grid a {
     padding: 1rem;
     font-weight: bold;
-    color: ($clr-black);
 }
 
 .main-grid>* {
     margin: 0 5px 5px 5px;
-}
-
-.card-link {
-    &::after {
-        content: '\f061';
-        font-family: 'Font Awesome 5 free';
-        font-weight: 900;
-        position: relative;
-        left: 0.5rem;
-    }
-}
-
-/* Card link is the moving arrow animations */
-.card-description + .card-link {
-    background-color: ($background-color);
 }
 
 .grid-cell {
@@ -223,29 +207,6 @@ img ~ * {
     background-color: ($background-color);
 }
 
-.card-link:hover {
-    text-decoration: underline;
-}
-
-.card-link {
-    &:hover::after {
-		animation: arrow 1s ease-in-out infinite alternate;
-	}
-}
-
-.grid-item .card-link {
-    color: ($clr-primary);
-}
-
-@keyframes arrow {
-	0% {
-		left: 0.5rem;
-	}
-	100% {
-		left: 1.5rem;
-	}
-}
-
 .card-image {
 	height: 12rem;
 	width: 100%;
@@ -253,7 +214,6 @@ img ~ * {
 }
 
 .card-title {
-    @include capitalize;
 	padding: 1rem;
 	text-align: center;
 }
@@ -275,11 +235,16 @@ img ~ * {
 }
 
 .card a {
+    @extend %a-arrow;
 	color: black;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	padding: 0.5rem 1rem;
+}
+
+.card-link {
+    @extend %a-arrow;
 }
 
 .arts {
@@ -351,9 +316,11 @@ img ~ * {
     .grid-item:last-of-type {
         display: block;
     }
+
     .card {
         padding-right: 0;
     }
+   
     textarea {
         width: 100%;
         margin-top: 7px;

@@ -1,0 +1,42 @@
+@use "vars-colors" as *;
+
+/* Arrow animation */
+@keyframes arrow {
+	0% {
+		left: 0.5rem;
+	}
+	100% {
+		left: 1.5rem;
+	}
+}
+
+/* Adds the moving arrow animation to an element */
+/* Use as a placeholder for more specific contexts */
+a {
+    color: green;
+
+    &::after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+        position: relative;
+        left: 0.5rem;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+%a-arrow {
+    &:hover::after {
+        animation: arrow 1s ease-in-out infinite alternate;
+    }
+}
+
+/*
+    NOTE: "@extend" in:
+    .card a
+    .trending-article a
+    .card-link
+*/
