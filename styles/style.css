@@ -255,17 +255,17 @@ footer {
 a {
   color: green;
 }
-a::after {
+a:hover {
+  text-decoration: underline;
+}
+
+.trending-article a::after, .card a::after, .card-link::after {
   content: "\f061";
   font-family: "Font Awesome 5 free";
   font-weight: 900;
   position: relative;
   left: 0.5rem;
 }
-a:hover {
-  text-decoration: underline;
-}
-
 .trending-article a:hover::after, .card a:hover::after, .card-link:hover::after {
   animation: arrow 1s ease-in-out infinite alternate;
 }

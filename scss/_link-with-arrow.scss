@@ -15,6 +15,12 @@
 a {
     color: green;
 
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+%a-arrow {
     &::after {
         content: '\f061';
         font-family: 'Font Awesome 5 free';
@@ -23,12 +29,6 @@ a {
         left: 0.5rem;
     }
 
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-%a-arrow {
     &:hover::after {
         animation: arrow 1s ease-in-out infinite alternate;
     }
