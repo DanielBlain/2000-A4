@@ -271,7 +271,7 @@ a:hover {
 }
 
 /*
-    NOTE: "@extend" in:
+    EXTEND LOCATIONS: "@extend" in
     .card a
     .trending-article a
     .card-link
@@ -519,6 +519,14 @@ a:hover {
     font-size: 0.7rem;
   }
 }
+/*
+    SASS VARIABLES: see vars-colors
+    MIXINS: see capitalize
+    NESTING AND PARENT SELECTORS: see .grid-cell below
+    PLACEHOLDER AND EXTEND: see link-with-arrow,
+        and EXTEND LOCATIONS referenced there
+
+*/
 body {
   background-color: #CFD8DC;
   font-family: "DM Sans", sans-serif;
@@ -708,6 +716,7 @@ img ~ * {
 }
 
 .card-title {
+  text-transform: capitalize;
   padding: 1rem;
   text-align: center;
 }

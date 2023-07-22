@@ -1,3 +1,11 @@
+/*
+    SASS VARIABLES: see vars-colors
+    MIXINS: see capitalize
+    NESTING AND PARENT SELECTORS: see .grid-cell below
+    PLACEHOLDER AND EXTEND: see link-with-arrow,
+        and EXTEND LOCATIONS referenced there
+
+*/
 @use "vars-colors" as *;
 @use "capitalize" as *;
 
@@ -214,6 +222,7 @@ img ~ * {
 }
 
 .card-title {
+    @include capitalize;
 	padding: 1rem;
 	text-align: center;
 }
